@@ -1,0 +1,28 @@
+{
+  "name": "Parser",
+  "version": "1.0.0",
+  "description": "",
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": ["https://poshmark.com/category/Women-Accessories-Gloves_&_Mittens*"],
+  "manifest_version": 3,
+  "author": "",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Parser",
+    "default_icon": {
+      "32": "assets/red-32.png"
+    }
+  },
+  "web_accessible_resources": [{
+    "resources": ["assets/red-32.png", "assets/green-32.png"],
+    "matches": ["https://poshmark.com/*"]
+  }],
+  "content_scripts": [
+    {
+      "matches": ["https://poshmark.com/category/Women-Accessories-Gloves_&_Mittens*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
